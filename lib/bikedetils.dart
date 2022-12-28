@@ -40,7 +40,7 @@ class _BikesDetilsState extends State<BikesDetils> {
         },
       child: SafeArea(
         child: Scaffold(
-          body: WebView(
+          body: InAppWebView(
             javascriptMode: JavascriptMode.unrestricted,
            initialUrl:("${firstproviderfalse.selectv.url}"),
             onWebViewCreated: (WebViewController webViewController){
