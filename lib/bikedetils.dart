@@ -20,14 +20,33 @@ class _BikesDetilsState extends State<BikesDetils> {
   var firstproviderfalse;
   var firstprovidertrue;
 
+  late WebViewController _webViewController;
+
   @override
   Widget build(BuildContext context) {
     firstproviderfalse = Provider.of<first_provider>(context, listen: false);
     firstprovidertrue = Provider.of<first_provider>(context, listen: true);
-    return SafeArea(
-      child: Scaffold(
-        body: WebView( javascriptMode: JavascriptMode.unrestricted,
-         initialUrl:("${firstproviderfalse.selectv.url}"),
+    return WillPopScope(
+      onWillPop: ()async{
+        if(await _webViewController.canGoBack())
+          {
+            _webViewController.goBack();
+            return false;
+          }
+        else
+          {
+            return true;
+          }
+        },
+      child: SafeArea(
+        child: Scaffold(
+          body: WebView(
+            javascriptMode: JavascriptMode.unrestricted,
+           initialUrl:("${firstproviderfalse.selectv.url}"),
+            onWebViewCreated: (WebViewController webViewController){
+              _webViewController = webViewController;
+            },
+          ),
         ),
       ),
     );

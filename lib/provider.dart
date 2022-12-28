@@ -8,7 +8,7 @@ import 'model.dart';
 class first_provider extends ChangeNotifier{
 
   List<Modeldata>l1=[
-    Modeldata(image:"assets/images/busa1.jpg",url: "https://www.suzukimotorcycle.co.in/product-details/hayabusa"),
+    Modeldata(image:"assets/images/busa1.jpg",url: "https://www.youtube.com/"),
     Modeldata(image:"assets/images/h2.jpg",url: "https://www.bikewale.com/kawasaki-bikes/ninja-h2/"),
     Modeldata(image:"assets/images/zx10r3.jpg",url: "https://kawasaki-india.com/bikes/ninja-zx-10r/"),
     Modeldata(image:"assets/images/zx14r4.jpg",url: "https://www.kawasaki.com/en-us/motorcycle/ninja/supersport/ninja-zx-14r"),

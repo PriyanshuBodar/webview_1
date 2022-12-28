@@ -16,12 +16,12 @@ class Truck extends StatefulWidget {
 
 class _TruckState extends State<Truck> {
   @override
-  void initState() {
-    super.initState();
-    if (Platform.isAndroid) {
-      WebView.platform = AndroidWebView();
-    }
-  }
+  // void initState() {
+  //   super.initState();
+  //   if (Platform.isAndroid) {
+  //     WebView.platform = AndroidWebView();
+  //   }
+  // }
 
   var firstproviderfalse;
   var firstprovidertrue;
