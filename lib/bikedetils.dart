@@ -1,9 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:provider/provider.dart';
 import 'package:webview_1/provider.dart';
-import 'package:webview_flutter/webview_flutter.dart';
-
 
 class BikesDetils extends StatefulWidget {
   const BikesDetils({Key? key}) : super(key: key);
@@ -20,8 +19,10 @@ class _BikesDetilsState extends State<BikesDetils> {
   var firstproviderfalse;
   var firstprovidertrue;
 
-  late WebViewController _webViewController;
-
+//  late WebViewController _webViewController;
+  late InAppWebViewController _webViewController;
+  String url = "";
+  double progress = 0;
   @override
   Widget build(BuildContext context) {
     firstproviderfalse = Provider.of<first_provider>(context, listen: false);
@@ -41,14 +42,41 @@ class _BikesDetilsState extends State<BikesDetils> {
       child: SafeArea(
         child: Scaffold(
           body: InAppWebView(
-            javascriptMode: JavascriptMode.unrestricted,
-           initialUrl:("${firstproviderfalse.selectv.url}"),
-            onWebViewCreated: (WebViewController webViewController){
-              _webViewController = webViewController;
+           // initialUrlRequest: URLRequest(url:'https://www.youtube.com/' ),
+
+            initialOptions: InAppWebViewGroupOptions(
+                crossPlatform: InAppWebViewOptions(
+                 disableHorizontalScroll: true,
+                  disableContextMenu: true,
+                )),
+            onWebViewCreated: (InAppWebViewController controller) {
+              _webViewController = controller;
+            },
+            onLoadStart: (InAppWebViewController controller,url) {
+              setState(() {
+                this.url = url as String;
+              });
+            },
+            onLoadStop:
+                (InAppWebViewController controller,url) async {
+              setState(() {
+                this.url = url as String;
+              });
+            },
+            onProgressChanged:
+                (InAppWebViewController controller, int progress) {
+              setState(() {
+                this.progress = progress / 100;
+              });
             },
           ),
         ),
-      ),
+            //javascriptMode: JavascriptMode.unrestricted,
+           //initialUrl:("${firstproviderfalse.selectv.url}"),
+           //  onWebViewCreated: (WebViewController webViewController){
+           //    _webViewController = webViewController;
+           //  },
+      )
     );
   }
 }

@@ -13,6 +13,7 @@ import 'car.dart';
 import 'cardetils.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(
       MultiProvider(
         providers: [

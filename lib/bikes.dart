@@ -55,7 +55,6 @@ class _BikesState extends State<Bikes> {
                      child: Image.asset(firstproviderfalse.l1[index].image,
                          fit: BoxFit.contain)),
                     ),
-
                 ],
               ),
             );
