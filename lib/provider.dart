@@ -1,6 +1,4 @@
 
-
-
 import 'package:flutter/material.dart';
 import 'model.dart';
 
@@ -20,7 +18,7 @@ class first_provider extends ChangeNotifier{
     Modeldata(image:"assets/images/goldwing9.jpg",url: "https://www.hondabigwing.in/goldwing"),
   ];
   List<Modeldata>l2=[
-    Modeldata(image:"assets/images/lembo1.jpg",url: "https://www.lamborghini.com/en-en"),
+    Modeldata(image:"assets/images/lembo1.jpg",url: "https://www.youtube.com/"),
     Modeldata(image:"assets/images/bugati2.jpg",url: "https://www.bugatti.com/"),
     Modeldata(image:"assets/images/bmw3.jpg",url: "https://www.bmw.in/en/index.html"),
     Modeldata(image:"assets/images/benz4.jpg",url: "https://www.kawasaki.com/en-us/motorcycle/ninja/supersport/ninja-zx-14r"),
@@ -32,7 +30,7 @@ class first_provider extends ChangeNotifier{
     Modeldata(image:"assets/images/ferrari10.jpg",url: "https://www.hondabigwing.in/goldwing"),
   ];
   List<Modeldata>l3=[
-    Modeldata(image:"assets/image/busa.jpeg",url: "https://www.suzukimotorcycle.co.in/product-details/hayabusa"),
+    Modeldata(image:"assets/image/busa.jpeg",url: "https://www.youtube.com/"),
     Modeldata(image:"assets/image/h2.jpeg",url: "https://www.bikewale.com/kawasaki-bikes/ninja-h2/"),
     Modeldata(image:"assets/image/10r.jpeg",url: "https://kawasaki-india.com/bikes/ninja-zx-10r/"),
     Modeldata(image:"assets/image/zx 14 r.jpeg",url: "https://www.kawasaki.com/en-us/motorcycle/ninja/supersport/ninja-zx-14r"),
@@ -55,8 +53,6 @@ class first_provider extends ChangeNotifier{
     Modeldata(image:"assets/image/bmwgsa.jpeg",url: "https://www.bmw-motorrad.in/en/models/adventure/r1250gs.html"),
     Modeldata(image:"assets/image/goldwing.jpeg",url: "https://www.hondabigwing.in/goldwing"),
   ];
- // List data=[];
-  //List seletect=[];
   Modeldata?selectv;
 
 }

@@ -34,12 +34,12 @@ class _BusState extends State<Bus> {
         body: GridView.builder(
           gridDelegate:
           SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-          itemCount: firstproviderfalse.l1.length,
+          itemCount: firstproviderfalse.l3.length,
           itemBuilder: (context, index) {
             return InkWell(
               onTap: () {
                 firstproviderfalse.selectv = Modeldata(
-                  url: firstproviderfalse.l1[index].url,
+                  url: firstproviderfalse.l3[index].url,
                 );
                 Navigator.pushNamed(context, 'bikesdetils');
               },
@@ -50,8 +50,8 @@ class _BusState extends State<Bus> {
                     alignment: Alignment.center,
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(firstproviderfalse.l1[index].image,
-                            fit: BoxFit.contain)),
+                        child: Image.asset(firstproviderfalse.l3[index].image,
+                            fit: BoxFit.fill)),
                   ),
 
                 ],

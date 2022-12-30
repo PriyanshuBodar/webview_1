@@ -38,7 +38,7 @@ class _CarState extends State<Car> {
                 firstproviderfalse.selectv = Modeldata(
                   url: firstproviderfalse.l2[index].url,
                 );
-                Navigator.pushNamed(context, 'bikesdetils');
+                Navigator.pushNamed(context, 'cardetils');
               },
               child: Column(
                 children: [
