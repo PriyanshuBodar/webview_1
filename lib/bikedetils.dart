@@ -42,8 +42,7 @@ class _BikesDetilsState extends State<BikesDetils> {
       child: SafeArea(
         child: Scaffold(
           body: InAppWebView(
-           // initialUrlRequest: URLRequest(url:'https://www.youtube.com/' ),
-
+           initialUrlRequest: URLRequest(url:Uri.parse('https://www.youtube.com/') ),
             initialOptions: InAppWebViewGroupOptions(
                 crossPlatform: InAppWebViewOptions(
                  disableHorizontalScroll: true,
